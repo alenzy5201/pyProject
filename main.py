@@ -3,8 +3,8 @@ import requests
 from tqdm import tqdm
 import time
 
-A = 'eyJhbGciOiJSUzI1NiJ9.eyJhcHBJZCI6ImU4NjBhNWExYTZhOTQwYjQ5YmU1NjM3Y2JlNjAxODFjIiwidXNlcklkIjoiZTZlOTc3YjJkNWE2NGE0OTgyYmNhNzg3YWNhZmEwZmIiLCJzaWQiOiI1MzVBMkFFMERDMjJEQjUyREMwQkFFOTY3NEFEMkE4OUM0QTk0OUU3NkZCODhBOENGMTY5RTAzOEMwREIzMTE1ODg1QTk0OEE2MjYyMTE3RUUwMDkxN0Q1NkYzRkNBQzUiLCJzY29wZSI6IlNDT1BFX0VIUiIsInR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MDQ2MTg0MTl9.CJXPmQOyEVUr7-8c6Djmll3QK76FpZ6vuR08s-kp4wZ0OtZggGZ0ZbxS19a04e3EZ52cEn5-6nWog3lOxS05-SHArOnubW9gWp9FWq3_I2JmgaLHbeURcTCnS2astT88zJI1guzmhqSvILu-D7Aox1rBuJJY6WKKfCcUPP6FzSvAzGpViwVHp4ODqf6SRdvO_AjYlWjcc2QDchr5m-JO8lXdz7hDhbckmjjNxehBjUkY3uMSpZSEgXQkSGGI5vAwMEekJXrWsG8EuxG6XtjKjsGlYIulZ2Seb5igPpEImm31aeykIdFoiRO6duiOYV0YkunlP9-VQULEJhCyNlehxg'
-C = 'uuid=d9a00ca7204ca246e228d5e237114eca; sid=b256f0eae45c4b048c4809f96b4373e9; token=eyJhbGciOiJSUzI1NiJ9.eyJhcHBJZCI6ImU4NjBhNWExYTZhOTQwYjQ5YmU1NjM3Y2JlNjAxODFjIiwidXNlcklkIjoiZTZlOTc3YjJkNWE2NGE0OTgyYmNhNzg3YWNhZmEwZmIiLCJzaWQiOiI1MzVBMkFFMERDMjJEQjUyREMwQkFFOTY3NEFEMkE4OUM0QTk0OUU3NkZCODhBOENGMTY5RTAzOEMwREIzMTE1ODg1QTk0OEE2MjYyMTE3RUUwMDkxN0Q1NkYzRkNBQzUiLCJzY29wZSI6IlNDT1BFX0VIUiIsInR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MDQ2MTg0MTl9.CJXPmQOyEVUr7-8c6Djmll3QK76FpZ6vuR08s-kp4wZ0OtZggGZ0ZbxS19a04e3EZ52cEn5-6nWog3lOxS05-SHArOnubW9gWp9FWq3_I2JmgaLHbeURcTCnS2astT88zJI1guzmhqSvILu-D7Aox1rBuJJY6WKKfCcUPP6FzSvAzGpViwVHp4ODqf6SRdvO_AjYlWjcc2QDchr5m-JO8lXdz7hDhbckmjjNxehBjUkY3uMSpZSEgXQkSGGI5vAwMEekJXrWsG8EuxG6XtjKjsGlYIulZ2Seb5igPpEImm31aeykIdFoiRO6duiOYV0YkunlP9-VQULEJhCyNlehxg'
+A = 'eyJhbGciOiJSUzI1NiJ9.eyJhcHBJZCI6ImU4NjBhNWExYTZhOTQwYjQ5YmU1NjM3Y2JlNjAxODFjIiwidXNlcklkIjoiZTZlOTc3YjJkNWE2NGE0OTgyYmNhNzg3YWNhZmEwZmIiLCJzaWQiOiI1MzVBMkFFMERDMjJEQjUyREMwQkFFOTY3NEFEMkE4OUM0QTk0OUU3NkZCODhBOENGMTY5RTAzOEMwREIzMTE1ODg1QTk0OEE2MjYyMTE3RUUwMDkxN0Q1NkYzRkNBQzUiLCJzY29wZSI6IlNDT1BFX0VIUiIsInR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MDQ2MjUzMjB9.Pd8r5Kh1vmAZCqedmTHfzDBlZFIrfVqDkmlfgkJESmgtFQEbBLXn4g0gNqlEiW3QJ5Q7_GkCWpWOdBRazEb5B0ZSIUFyNPgVE_XEWJtG0DwBFyp2WaQMm5ddhGyBtJ__gS0wp3puiKnw8rkUB3s2Vr76p7qIGS6vSUM586oiGEFC-Y6nSX3nuX-NH4--_DMclhJehDXsElfIvDEDWVWpuTE3bTxhQb3iUFf9Zxf6kTojfDjS5wwyrCZxxoqkcIy22-T0vnNiAPAdM4ScZmv7_VTZtW7070q8vO5evNLeQNmVbm5GVxinvi2UfU0akl8jtxDV9I7tyVgT48NdDyl5sA'
+C = 'uuid=d9a00ca7204ca246e228d5e237114eca; sid=b256f0eae45c4b048c4809f96b4373e9; token=eyJhbGciOiJSUzI1NiJ9.eyJhcHBJZCI6ImU4NjBhNWExYTZhOTQwYjQ5YmU1NjM3Y2JlNjAxODFjIiwidXNlcklkIjoiZTZlOTc3YjJkNWE2NGE0OTgyYmNhNzg3YWNhZmEwZmIiLCJzaWQiOiI1MzVBMkFFMERDMjJEQjUyREMwQkFFOTY3NEFEMkE4OUM0QTk0OUU3NkZCODhBOENGMTY5RTAzOEMwREIzMTE1ODg1QTk0OEE2MjYyMTE3RUUwMDkxN0Q1NkYzRkNBQzUiLCJzY29wZSI6IlNDT1BFX0VIUiIsInR5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MDQ2MjUzMjB9.Pd8r5Kh1vmAZCqedmTHfzDBlZFIrfVqDkmlfgkJESmgtFQEbBLXn4g0gNqlEiW3QJ5Q7_GkCWpWOdBRazEb5B0ZSIUFyNPgVE_XEWJtG0DwBFyp2WaQMm5ddhGyBtJ__gS0wp3puiKnw8rkUB3s2Vr76p7qIGS6vSUM586oiGEFC-Y6nSX3nuX-NH4--_DMclhJehDXsElfIvDEDWVWpuTE3bTxhQb3iUFf9Zxf6kTojfDjS5wwyrCZxxoqkcIy22-T0vnNiAPAdM4ScZmv7_VTZtW7070q8vO5evNLeQNmVbm5GVxinvi2UfU0akl8jtxDV9I7tyVgT48NdDyl5sA'
 
 
 url = 'https://ehr.scwjxx.cn/ehrc/ehr/jkda/get/paging/simple'
@@ -13,7 +13,11 @@ headers = {
     'Accesstoken': A,
     'Accesstoken2': '',  # 替换为你的实际访问令牌2
     'Cookie': C}
-number = 7
+number = 1
+
+
+
+
 size = 14
 params = {
     'total': 0,
@@ -25,7 +29,7 @@ params = {
     'qyCsConditionCondition': '=%3D',
     '_type': 'area',
     'wgId': '',
-    'qhId': 'J511722110207006',
+    'qhId': 'J511722110207001',
     'keywordType': 'zjhm',
     'zrysIds': '',
     'nlBeginType': '年',
@@ -65,14 +69,14 @@ headers1 = {
 
 url1 = 'https://ehr.scwjxx.cn/ehrc/ehr/jkda/get/'
 
-total = 235
+total = 332
 progress_bar = tqdm(total=total, desc="Processing", unit="item")
 # 遍历每个不同的 daId 中的数据 通过record获取修改的id 拼接url
 
 count =(int(params['pageNumber'])-1) * int(params['pageSize'])
 print(count)
 
-for count in range(total):
+while count != total:
     for record in data['data']['data']:
         #print(record)
         id = record['daId']
@@ -116,7 +120,7 @@ for count in range(total):
         response = requests.put(remote_api_url, json=data, headers=headers1)
         # 检查请求是否成功
         if response.status_code == 200:
-            print('数据推送成功,当前的page:{}. count为：{}'.format(data['pageNumber'],     count))
+            print('数据推送成功,当前的page:{}. count为：{}'.format(params['pageNumber'], count))
             response = requests.get(url, headers=headers, params=params)
             data = response.json()
         else:
